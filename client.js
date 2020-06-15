@@ -1,7 +1,7 @@
 'use strict';
 const net = require('net');
-const input = require('./input.js');
-const draw = require('./draw.js');
+const input = require('./scripts/input.js');
+const draw = require('./scripts/draw.js');
 
 const connection = { port: 2000, host: '127.0.0.1' };
 const START_MESSAGE = 'The game has started. Press \'q\' to quit \nConnecting to localhost';

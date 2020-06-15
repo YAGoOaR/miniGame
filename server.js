@@ -1,7 +1,7 @@
 'use strict';
 const net = require('net');
-const input = require('./input.js');
-const game = require('./game.js');
+const input = require('./scripts/input.js');
+const game = require('./scripts/game.js');
 const GameInstance = game.Game;
 
 const START_MESSAGE = 'Waiting for client';
