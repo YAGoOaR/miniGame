@@ -7,7 +7,7 @@ const connection = { port: 2000, host: '127.0.0.1' };
 const START_MESSAGE = 'The game has started. Press \'q\' to quit \nConnecting to localhost';
 const ERROR_MESSAGE = `There is no reachable server on ${connection.host}`;
 const NO_CONNECTION_MESSAGE = 'no connection';
-const RETRY_MESSAGE = 'do you want to retry?(\'r\' -retry, \'c\' - change connection ip address, default quit)';
+const RETRY_MESSAGE = 'Do you want to retry?\n(\'r\' -retry, \'c\' - change connection ip address, default - quit)';
 const CONNECTION_MESSAGE = 'choose connection ip';
 
 let curChar = '';
