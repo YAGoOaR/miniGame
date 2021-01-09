@@ -15,31 +15,31 @@ console.log(START_MESSAGE);
 
 server.on('connection', onConnection);
 
-function onConnection(socket){
-	if(currentGame) return;
-	currentGame = new GameInstance(socket);
-	socket.setNoDelay(true);
-	socket.on( 'error', onError);
-	socket.on( 'end', onEnd);
+function onConnection(socket) {
+  if (currentGame) return;
+  currentGame = new GameInstance(socket);
+  socket.setNoDelay(true);
+  socket.on('error', onError);
+  socket.on('end', onEnd);
 }
 
-function onError(){
-	endGame();
-	console.clear();
-	console.log(ERROR_MESSAGE);
+function onError() {
+  endGame();
+  console.clear();
+  console.log(ERROR_MESSAGE);
 }
 
-function onEnd(){
-	endGame();
-	console.log(END_MESSAGE);
+function onEnd() {
+  endGame();
+  console.log(END_MESSAGE);
 }
 
-function endGame(){
-	currentGame.stop();
-	currentGame = null;
+function endGame() {
+  currentGame.stop();
+  currentGame = null;
 }
 
 input.keyEvent(input.QUIT_BUTTON, () => {
-	console.clear();
-	process.exit(0);
+  console.clear();
+  process.exit(0);
 });
